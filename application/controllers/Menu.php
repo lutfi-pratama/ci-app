@@ -7,6 +7,7 @@ class Menu extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+    
         $this->load->model('menu_model');
     }
 
@@ -14,6 +15,8 @@ class Menu extends CI_Controller
     {
         $data['title'] = 'Menu Management';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        // var_dump($this->menu_model->getSubMenu());
 
         $data['menu'] = $this->db->get('user_menu')->result_array();
 
@@ -25,9 +28,23 @@ class Menu extends CI_Controller
             $this->load->view('templates/topbar', $data);
             $this->load->view('menu/index', $data);
             $this->load->view('templates/footer');
+
         } else {
             $this->db->insert('user_menu', ['menu' => $this->input->post('menu')]);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">New menu successfull added!</div>');
+
+            $max_id = $this->db->query("SELECT MAX(id) FROM user_menu")->result_array();
+
+            $this->db->insert('user_access_menu', ['role_id' =>  $this->session->userdata('role_id'), 'menu_id' => $max_id[0]["MAX(id)"]]);
+
+            $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                New menu successfull added!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            ');
+
             redirect('menu');
         }
     }
@@ -35,7 +52,14 @@ class Menu extends CI_Controller
     public function delete($id)
     {
         $this->menu_model->deleteMenu($id);
-        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Data Menu has been deleted!</div>');
+        $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Data Menu has been deleted!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        ');
         redirect('menu');
     }
 

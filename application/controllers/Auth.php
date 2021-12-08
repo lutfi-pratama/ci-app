@@ -51,8 +51,10 @@ class Auth extends CI_Controller
                     $this->session->set_userdata($data);
 
                     if($user['role_id'] == 1) {
+                        unset($_SESSION['message']);   // to destroy specific session
                         redirect('admin');
                     } else {
+                        unset($_SESSION['message']);    // to destroy specific session
                         redirect('user');
                     }
                 } else {

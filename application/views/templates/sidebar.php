@@ -21,7 +21,9 @@
                       WHERE `user_access_menu`.`role_id` = $role_id
                       ORDER BY `user_access_menu`.`menu_id` ASC
                      ";
+
     $menu = $this->db->query($queryMenu)->result_array();
+    // var_dump($menu);
 
 
     ?>
