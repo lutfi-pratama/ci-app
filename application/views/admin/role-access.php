@@ -9,7 +9,11 @@
 
             <?= $this->session->flashdata('message'); ?>
 
-            <h5>Role : <?=  $role['role']; ?></h5>
+            <?php
+            unset($_SESSION['message']);
+            ?>
+
+            <h5>Role : <?= $role['role']; ?></h5>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -26,7 +30,7 @@
                             <td><?= $m['menu']; ?></td>
                             <td>
                                 <div class="form-check">
-                                <input class="form-check-input" type="checkbox" <?= check_access($role['id'], $m['id']); ?> data-role="<?= $role['id']; ?>" data-menu="<?= $m['id']; ?>">
+                                    <input class="form-check-input" type="checkbox" <?= check_access($role['id'], $m['id']); ?> data-role="<?= $role['id']; ?>" data-menu="<?= $m['id']; ?>">
                                 </div>
                             </td>
                         </tr>

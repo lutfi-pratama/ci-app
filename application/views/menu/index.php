@@ -30,7 +30,7 @@
                             <th scope="row"><?= $i; ?></th>
                             <td><?= $m['menu']; ?></td>
                             <td>
-                                <a href="<?= base_url('menu/update'); ?><?= $m['id']; ?>" class=" badge badge-success" data-toggle="modal" data-target="#updateMenuModal">edit</a>
+                                <a href="<?= base_url('menu/update/'); ?><?= $m['id']; ?>" class=" badge badge-success" data-toggle="modal" data-target="#updateMenuModal">edit</a>
                                 <a href="<?= base_url('menu/delete/'); ?><?= $m['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
                             </td>
                         </tr>
