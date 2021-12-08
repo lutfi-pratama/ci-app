@@ -53,7 +53,7 @@ class Menu extends CI_Controller
     {
         $this->menu_model->deleteMenu($id);
         $this->session->set_flashdata('message', '
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 Data Menu has been deleted!
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -103,5 +103,19 @@ class Menu extends CI_Controller
             redirect('menu/submenu');
 
         }
+    }
+
+    public function sub_delete($id)
+    {
+        $this->menu_model->deleteSubMenu($id);
+        $this->session->set_flashdata('message', '
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Data Sub-Menu has been deleted!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        ');
+        redirect('menu/submenu');
     }
 }

@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class="col-lg">
-            <?php if(validation_errors()) : ?>
+            <?php if (validation_errors()) : ?>
                 <div class="alert alert-danger" role="alert">
                     <?= validation_errors(); ?>
                 </div>
@@ -41,8 +41,8 @@
                             <td><?= $sm['icon']; ?></td>
                             <td><?= $sm['is_active']; ?></td>
                             <td>
-                                <a href="" class=" badge badge-success" data-toggle="modal" data-target="#updateMenuModal">edit</a>
-                                <a href="" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
+                                <a href="<?= base_url('menu/sub_update/'); ?><?= $sm['id']; ?>" class=" badge badge-success" data-toggle="modal" data-target="#updateSubMenuModal">edit</a>
+                                <a href="<?= base_url('menu/sub_delete/'); ?><?= $sm['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
                             </td>
                         </tr>
                         <?php $i++; ?>
