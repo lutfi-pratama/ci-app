@@ -7,6 +7,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->model('menu_model');
     }
 
     public function index()
@@ -71,5 +72,21 @@ class Admin extends CI_Controller
         }
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Access Changed!</div>');
+    }
+
+    public function roleupdate($id)
+    {
+        $this->menu_model->updateRole($id);
+
+        $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                User role successfully updated!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        ');
+
+        redirect('admin/role');
     }
 }
