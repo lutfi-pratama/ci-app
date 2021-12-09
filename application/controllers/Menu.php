@@ -30,12 +30,8 @@ class Menu extends CI_Controller
             $this->load->view('templates/footer');
 
         } else {
-            $this->db->insert('user_menu', ['menu' => $this->input->post('menu')]);
-
-            $max_id = $this->db->query("SELECT MAX(id) FROM user_menu")->result_array();
-
-            $this->db->insert('user_access_menu', ['role_id' =>  $this->session->userdata('role_id'), 'menu_id' => $max_id[0]["MAX(id)"]]);
-
+            
+            $this->menu_model->addMenu();
             $this->session->set_flashdata('message', '
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 New menu successfull added!
@@ -65,8 +61,19 @@ class Menu extends CI_Controller
 
     public function update($id)
     {
+        var_dump($id);
+
         $this->menu_model->UpdateMenu($id);
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Menu successfully updated!</div>');
+
+        $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Menu successfully updated!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        ');
+
         redirect('menu');
     }
 
@@ -99,9 +106,17 @@ class Menu extends CI_Controller
             ];
             
             $this->db->insert('user_sub_menu', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">New Sub Menu Added!</div>');
-            redirect('menu/submenu');
 
+            $this->session->set_flashdata('message', '
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    New Sub-Menu Added!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            ');
+
+            redirect('menu/submenu');
         }
     }
 
@@ -116,6 +131,22 @@ class Menu extends CI_Controller
                 </button>
             </div>
         ');
+        redirect('menu/submenu');
+    }
+
+    public function sub_update($id)
+    {
+        $this->menu_model->updateSubMenu($id);
+
+        $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Sub-Menu successfully updated!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        ');
+
         redirect('menu/submenu');
     }
 }
