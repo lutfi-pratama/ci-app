@@ -16,6 +16,7 @@
                                 </div>
 
                                 <?= $this->session->flashdata('message'); ?>
+                                <?php unset($_SESSION['message']); ?>
 
                                 <form class="user" method="POST" action="<?= base_url('auth'); ?>">
                                     <div class="form-group">

@@ -9,11 +9,9 @@
 
             <?= $this->session->flashdata('message'); ?>
 
-            <?php
-            unset($_SESSION['message']);
-            ?>
+            <?php unset($_SESSION['message']); ?>       
 
-            <h5>Role : <?= $role['role']; ?></h5>
+            <h5>Role : <?=  $role['role']; ?></h5>
             <table class="table table-hover">
                 <thead>
                     <tr>

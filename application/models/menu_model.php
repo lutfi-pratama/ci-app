@@ -14,6 +14,15 @@ class menu_model extends CI_Model
         return $this->db->get_where('user_menu', ['id' => $id])->row_array();
     }
 
+    public function addMenu()
+    {   
+        $this->db->insert('user_menu', ['menu' => $this->input->post('menu')]);
+
+        $max_id = $this->db->query("SELECT MAX(id) FROM user_menu")->result_array();
+
+        $this->db->insert('user_access_menu', ['role_id' =>  $this->session->userdata('role_id'), 'menu_id' => $max_id[0]["MAX(id)"]]);
+    }
+
     public function deleteMenu($id)
     {
         $this->db->where('id', $id);
@@ -26,7 +35,7 @@ class menu_model extends CI_Model
             "menu" => $this->input->post('menu', true)
         ];
 
-        $this->db->where('id', $this->input->post('id'));
+        $this->db->where('id', $id);
         $this->db->update('user_menu', $data);
     }
 
@@ -34,6 +43,30 @@ class menu_model extends CI_Model
     {
         $this->db->where('id', $id);
         $this->db->delete('user_sub_menu');
+    }
+
+    public function updateSubMenu($id)
+    {
+        $data = [
+            'title' => $this->input->post('title'),
+            'menu_id' => $this->input->post('menu_id'),
+            'url' => $this->input->post('url'),
+            'icon' => $this->input->post('icon'),
+            'is_active' => $this->input->post('is_active')
+        ];
+
+        $this->db->where('id', $id);
+        $this->db->update('user_sub_menu', $data);
+    }
+
+    public function updateRole($id) 
+    {
+        $data = [
+            "role" => $this->input->post('Role', true)
+        ];
+
+        $this->db->where('id', $id);
+        $this->db->update('user_role', $data);
     }
 }
 ?>
