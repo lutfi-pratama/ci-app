@@ -59,6 +59,20 @@ class menu_model extends CI_Model
         $this->db->update('user_sub_menu', $data);
     }
 
+    public function addRole()
+    {
+        $this->db->insert('user_role', ['role' => $this->input->post('role')]);
+
+        $max_id = $this->db->query("SELECT MAX(id) FROM user_role")->result_array();
+    }
+
+    public function deleteRole($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('user_role');
+    }
+
+
     public function updateRole($id) 
     {
         $data = [
