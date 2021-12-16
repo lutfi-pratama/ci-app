@@ -28,9 +28,7 @@ class Menu extends CI_Controller
             $this->load->view('templates/topbar', $data);
             $this->load->view('menu/index', $data);
             $this->load->view('templates/footer');
-
         } else {
-            
             $this->menu_model->addMenu();
             $this->session->set_flashdata('message', '
             <div class="alert alert-success alert-dismissible fade show" role="alert">

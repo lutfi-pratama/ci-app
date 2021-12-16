@@ -68,5 +68,14 @@ class menu_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->update('user_role', $data);
     }
+
+    public function addRole()
+    {
+        $data = [
+            'role' => $this->input->post('role')
+        ];
+
+        $this->db->insert('user_role', $data);
+    }
 }
 ?>

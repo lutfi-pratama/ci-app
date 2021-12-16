@@ -15,6 +15,8 @@
     <!-- QUERY dari Menu -->
     <?php
     $role_id = $this->session->userdata('role_id');
+    // $this->db->select('role_access_menu');
+    // $role_access = $this->db->get('user_role');
     $queryMenu = "SELECT `user_menu`.`id`, `menu`
                       FROM `user_menu` JOIN `user_access_menu` 
                       ON `user_menu`.`id` = `user_access_menu`.`menu_id`
