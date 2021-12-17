@@ -94,7 +94,10 @@ class menu_model extends CI_Model
 
     public function showProductList()
     {
-        return $this->db->get('produk_list')->row_array();
+        // $query = "SELECT `produk_list`.*, `user_menu`.`menu` FROM `user_sub_menu` JOIN `user_menu` ON `user_sub_menu`.`menu_id` = `user_menu`.`id`";
+
+        return $this->db->get('produk_list')->result_array();
+        // return $this->db->query($query)->result_array();
     }
 }
 ?>

@@ -15,7 +15,7 @@
 
             <?php unset($_SESSION['message']); ?>
 
-            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newSubMenuModal">Add New Product</a>
+            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newProdukModal">Add New Product</a>
 
             <table class="table table-hover">
                 <thead>
@@ -28,8 +28,22 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-
                 <tbody>
+                    <?php $i = 1; ?>
+                    <?php foreach ($produk as $pd) : ?>
+                        <tr>
+                            <th scope="row"><?= $i; ?></th>
+                            <td><?= $pd['jenis']; ?></td>
+                            <td><?= $pd['kategori']; ?></td>
+                            <td><?= $pd['produk']; ?></td>
+                            <td><?= $pd['harga']; ?></td>
+                            <td>
+                                <a href="" class=" badge badge-success" data-toggle="modal" data-target="#updateProdukModal<?= $pd['id']; ?> ">edit</a>
+                                <a href="<?= base_url('Produk/delete/'); ?><?= $pd['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
+                            </td>
+                        </tr>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -40,3 +54,39 @@
 
 </div>
 <!-- End of Main Content -->
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="newProdukModal" tabindex="-1" role="dialog" aria-labelledby="newProdukModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newProdukModalLabel">Add New Produk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="<?= base_url('Produk'); ?>" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="jenis" name="jenis" placeholder="Tambahkan Jenis Produk">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="kategori" name="kategori" placeholder="Tambahkan Kategori Produk">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="produk" name="produk" placeholder="Tambahkan Nama Produk">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="harga" name="harga" placeholder="Tambahkan Harga Produk" min="0">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
