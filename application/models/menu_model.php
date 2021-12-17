@@ -59,12 +59,12 @@ class menu_model extends CI_Model
         $this->db->update('user_sub_menu', $data);
     }
 
-    public function addRole()
-    {
-        $this->db->insert('user_role', ['role' => $this->input->post('role')]);
+    // public function addRole()
+    // {
+    //     $this->db->insert('user_role', ['role' => $this->input->post('role')]);
 
-        $max_id = $this->db->query("SELECT MAX(id) FROM user_role")->result_array();
-    }
+    //     $max_id = $this->db->query("SELECT MAX(id) FROM user_role")->result_array();
+    // }
 
     public function deleteRole($id)
     {
@@ -90,6 +90,11 @@ class menu_model extends CI_Model
         ];
 
         $this->db->insert('user_role', $data);
+    }
+
+    public function showProductList()
+    {
+        return $this->db->get('produk_list')->row_array();
     }
 }
 ?>
