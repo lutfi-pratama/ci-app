@@ -30,6 +30,14 @@
                 </thead>
 
                 <tbody>
+                <?php $i = 1; ?>
+                    <?php foreach ($produk as $p) : ?>
+                        <tr>
+                            <th scope="row"><?= $i; ?></th>
+                            <td><?= $p['kategori'] ?></td>
+                        </tr>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
