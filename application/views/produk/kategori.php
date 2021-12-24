@@ -17,6 +17,7 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Jenis</th>
                         <th scope="col">Kategori</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -26,6 +27,7 @@
                     <?php foreach ($kategori as $k) : ?>
                         <tr>
                             <th scope="row"><?= $i; ?></th>
+                            <td><?= $k['jenis']; ?></td>
                             <td><?= $k['kategori']; ?></td>
                             <td>
                                 <a href="" class=" badge badge-success" data-toggle="modal" data-target="#updateKategoriModal<?= $k['id']; ?> ">edit</a>
@@ -59,6 +61,14 @@
             <form action="<?= base_url('produk/kategori'); ?>" method="post">
                 <div class="modal-body">
                     <div class="form-group">
+                        <select required name="jenis" id="jenis" class="form-control">
+                            <option value="">Pilih Jenis Produk</option>
+                            <?php foreach ($jenis as $j) : ?>
+                                <option value="<?= $j['jenis']; ?>"><?= $j['jenis']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <input type="text" class="form-control" id="kategori" name="kategori" placeholder="Masukkan Kategori">
                     </div>
                 </div>
@@ -86,6 +96,14 @@
                 <form action="<?= base_url('produk/updateKategori/'); ?><?= $k['id'] ?>" method="post">
                     <input type="hidden" name="id" value="<?= $k['id'] ?>">
                     <div class="modal-body">
+                        <div class="form-group">
+                            <select required name="jenis" id="jenis" class="form-control">
+                                <option value="">Pilih Jenis Produk</option>
+                                <?php foreach ($jenis as $j) : ?>
+                                    <option value="<?= $j['jenis']; ?>"><?= $j['jenis']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <input required type="text" value=<?= $k['kategori'] ?> class="form-control" id="kategori" name="kategori" placeholder="Masukkan Kategori">
                         </div>

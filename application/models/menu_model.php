@@ -151,7 +151,12 @@ class menu_model extends CI_Model
 
     public function addKategori()
     {
-        $this->db->insert('produk_kategori', ['kategori' => $this->input->post('kategori')]);
+        $data = [
+            'jenis' => $this->input->post('jenis'),
+            "kategori" => $this->input->post('kategori')
+        ];
+
+        $this->db->insert('produk_kategori', $data);
     }
 
     public function deleteKategori($id)
@@ -163,6 +168,7 @@ class menu_model extends CI_Model
     public function UpdateKategori($id)
     {
         $data = [
+            'jenis' => $this->input->post('jenis', true),
             "kategori" => $this->input->post('kategori', true)
         ];
 
@@ -170,6 +176,14 @@ class menu_model extends CI_Model
         $this->db->update('produk_kategori', $data);
     }
 
+    public function getKategori($jenis) 
+    {
+        return $this->db->get_where('produk_kategori', ['jenis' => $jenis])->result_array();   
+    }
 
+    public function getProduk($kategori)
+    {
+        return $this->db->get_where('produk_list', ['kategori' => $kategori])->result_array();
+    }
 }
 ?>

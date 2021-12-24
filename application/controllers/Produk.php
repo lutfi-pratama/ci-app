@@ -139,7 +139,7 @@ class Produk extends CI_Controller
   {
     $data['title'] = 'Kategori Produk';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
+    $data['jenis'] = $this->db->get('produk_jenis')->result_array();
     $data['kategori'] = $this->db->get('produk_kategori')->result_array();
 
     $this->form_validation->set_rules('kategori', 'kategori', 'required');
