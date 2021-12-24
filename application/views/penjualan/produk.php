@@ -2,19 +2,30 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
+    <div class="navbar">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <?php $shopcart = 'Keranjang Belanja: '.$this->cart->total_items(). ' items' ?>
+                <?= $shopcart ?>
+            </li>
+        </ul>
+    </div>
 
     <div class="list-group" id="list-tab" role="tablist">
         <?php foreach ($produk as $p) : ?>
             <div class="list-item list-group-item list-group-item-action" role="tab" aria-controls="{$p['kategori']}">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img style="margin:0px 20px; height:150px; width:150px; object-fit: cover;" src="<?= base_url('assets/img/produk/') . $p['image']; ?>" class="img-fluid rounded-start">
                     </div>
-                    <div class="col-md-4">
-                        <p><?= $p['produk'];?></p>
+                    <div class="col-md-3">
+                        <p><?= $p['produk']; ?></p>
                     </div>
-                    <div class="col-md-4">
-                        <p>Rp.<?= $p['harga'];?></p>
+                    <div class="col-md-3">
+                        <p>Rp.<?= $p['harga']; ?></p>
+                    </div>
+                    <div class="col-md-3">
+                        <?= anchor('penjualan/insertToCart/' . $p['id'], '<div class="btn btn-sm btn-primary">Tambah ke Keranjang</div>'); ?>
                     </div>
                 </div>
             </div>

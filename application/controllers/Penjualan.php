@@ -46,4 +46,20 @@ class Penjualan extends CI_Controller
       $this->load->view('templates/topbar', $data);
       $this->load->view('penjualan/produk', $data);
     }
+
+    public function insertToCart($id) 
+    {
+      $item = $this->menu_model->getProdukById($id);
+
+      $data = [
+        'id' => $item[0]['id'],
+        'qty' => 1,
+        'price' => $item[0]['harga'],
+        'name' => $item[0]['produk']
+      ];
+
+      $this->cart->insert($data);
+
+      redirect('penjualan/showProduk/'.$item[0]['kategori']);
+    }
 }
