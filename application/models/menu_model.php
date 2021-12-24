@@ -94,7 +94,24 @@ class menu_model extends CI_Model
 
     public function showProductList()
     {
-        return $this->db->get('produk_list')->row_array();
+        return $this->db->get('produk_list')->result_array();
+    }
+    public function addProduk()
+    {
+        $data = [
+            'jenis' => $this->input->post('jenis'),
+            'kategori' => $this->input->post('kategori'),
+            'produk' => $this->input->post('produk'),
+            'harga' => $this->input->post('harga')
+        ];
+
+        $this->db->insert('produk_list', $data);
+    }
+
+    public function deleteProduk($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('produk_list');
     }
 }
 ?>
