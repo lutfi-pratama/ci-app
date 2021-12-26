@@ -11,7 +11,7 @@ class Penjualan extends CI_Controller
       
       public function index()
       {
-        $data['title'] = "Penjualan Produk - Jenis";
+        $data['title'] = "Penjualan";
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['jenis'] = $this->db->get('produk_jenis')->result_array();
         
@@ -23,7 +23,7 @@ class Penjualan extends CI_Controller
       
     public function showKategori($jenis) 
     {
-      $data['title'] = "Penjualan Produk - Kategori";
+      $data['title'] = "Penjualan";
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
       $dataKategori = $this->menu_model->getKategori($jenis);
       $data['kategori'] = $dataKategori;
@@ -36,7 +36,7 @@ class Penjualan extends CI_Controller
           
     public function showProduk($kategori) 
     {
-      $data['title'] = "Penjualan Produk - Item Produk";
+      $data['title'] = "Penjualan";
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
       $dataProduk = $this->menu_model->getProduk($kategori);
       $data['produk'] = $dataProduk;
@@ -99,7 +99,24 @@ class Penjualan extends CI_Controller
         'metode' => $this->input->post('metode'),
       ];
 
-      var_dump($data);
-      // var_dump($this->cart->contents()/);
+      // var_dump($data);
+      var_dump($this->cart->contents());
+    }
+
+    public function showSuccess()
+    {
+      $data['title'] = "";
+      $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+      $this->load->view('templates/header', $data);
+      $this->load->view('templates/sidebar', $data);
+      $this->load->view('templates/topbar', $data);
+      $this->load->view('penjualan/success', $data);
+    }
+
+    public function deleteCartSuccess()
+    {
+      $this->cart->destroy();
+      redirect(base_url('penjualan'));
     }
 }

@@ -3,7 +3,7 @@
     <h5 class="card-header"><b>Total Pembayaran</b></h5>
     <div class="card-body">
       <h6 class="card-title">Pilih Metode Pembayaran</h6>
-      <form action="<?= base_url('penjualan/checkout'); ?>" method="post">
+      <form action="<?= base_url('invoice/insertDataPembelian'); ?>" method="post">
         <div style="width: 60%;" class="btn-group-toggle d-flex flex-column" name="metode" data-toggle="buttons">
           <label style="align-items: center; cursor: pointer;" class="btn btn-outline-info my-2 d-flex justify-content-between">
             <img class="my-1 img-thumbnail image__payment" src="<?php echo base_url('assets/img/icon/GoPay.png'); ?>" />

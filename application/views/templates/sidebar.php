@@ -18,11 +18,11 @@
     // $this->db->select('role_access_menu');
     // $role_access = $this->db->get('user_role');
     $queryMenu = "SELECT `user_menu`.`id`, `menu`
-                      FROM `user_menu` JOIN `user_access_menu` 
-                      ON `user_menu`.`id` = `user_access_menu`.`menu_id`
-                      WHERE `user_access_menu`.`role_id` = $role_id
-                      ORDER BY `user_access_menu`.`menu_id` ASC
-                     ";
+                    FROM `user_menu` JOIN `user_access_menu` 
+                    ON `user_menu`.`id` = `user_access_menu`.`menu_id`
+                    WHERE `user_access_menu`.`role_id` = $role_id
+                    ORDER BY `user_access_menu`.`menu_id` ASC
+                ";
 
     $menu = $this->db->query($queryMenu)->result_array();
     // var_dump($menu);
@@ -40,10 +40,10 @@
         <?php
         $menuId = $m['id'];
         $querySubMenu = "SELECT *
-                         FROM `user_sub_menu` 
-                         WHERE `menu_id` = $menuId
-                         AND `is_active` = 1
-                    ";
+                            FROM `user_sub_menu` 
+                            WHERE `menu_id` = $menuId
+                            AND `is_active` = 1
+                        ";
         $subMenu = $this->db->query($querySubMenu)->result_array();
         ?>
 

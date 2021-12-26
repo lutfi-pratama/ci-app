@@ -54,7 +54,7 @@ class Produk extends CI_Controller
 
     //tampilkan data
     $data['start'] = $this->uri->segment(2);
-    $data['title'] = "Product Management";
+    $data['title'] = "Produk";
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     $data['kategori'] = $this->db->get('produk_kategori')->result_array();
     $data['jenis'] = $this->db->get('produk_jenis')->result_array();
@@ -137,7 +137,7 @@ class Produk extends CI_Controller
 
   public function kategori()
   {
-    $data['title'] = 'Kategori Produk';
+    $data['title'] = 'Kategori';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     $data['jenis'] = $this->db->get('produk_jenis')->result_array();
     $data['kategori'] = $this->db->get('produk_kategori')->result_array();
