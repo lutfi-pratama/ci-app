@@ -62,4 +62,44 @@ class Penjualan extends CI_Controller
 
       redirect('penjualan/showProduk/'.$item[0]['kategori']);
     }
+
+    public function detailCart() 
+    {
+      $data['title'] = "Detail Penjualan";
+      $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+      
+      $this->load->view('templates/header', $data);
+      $this->load->view('templates/sidebar', $data);
+      $this->load->view('templates/topbar', $data);
+      $this->load->view('penjualan/keranjang', $data);
+      $this->load->view('templates/footer', $data);
+    }
+
+    public function deleteCart()
+    {
+      $this->cart->destroy();
+      redirect(base_url('penjualan/detailCart/'));
+    }
+
+    public function pembayaranProduk()
+    {
+      $data['title'] = "Pembayaran";
+      $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+      $this->load->view('templates/header', $data);
+      $this->load->view('templates/sidebar', $data);
+      $this->load->view('templates/topbar', $data);
+      $this->load->view('penjualan/pembayaran', $data);
+      $this->load->view('templates/footer', $data);
+    }
+
+    public function checkout()
+    {
+      $data = [
+        'metode' => $this->input->post('metode'),
+      ];
+
+      var_dump($data);
+      // var_dump($this->cart->contents()/);
+    }
 }

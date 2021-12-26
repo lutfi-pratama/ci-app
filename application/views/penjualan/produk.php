@@ -5,7 +5,12 @@
     <div class="navbar">
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <?php $shopcart = 'Keranjang Belanja: '.$this->cart->total_items(). ' items' ?>
+                <a href="<?= base_url('penjualan/detailCart/'); ?>" class="mr-2 text-decoration-none">
+                    <button type="button" class="btn btn-circle btn-outline-info">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </a>
+                <?php $shopcart = $this->cart->total_items(). ' items' ?>
                 <?= $shopcart ?>
             </li>
         </ul>
@@ -22,17 +27,19 @@
                         <p><?= $p['produk']; ?></p>
                     </div>
                     <div class="col-md-3">
-                        <p>Rp.<?= $p['harga']; ?></p>
+                        <p>Rp. <?= number_format($p['harga'], 0, ',', '.') ?></p>
                     </div>
                     <div class="col-md-3">
-                        <?= anchor('penjualan/insertToCart/' . $p['id'], '<div class="btn btn-sm btn-primary">Tambah ke Keranjang</div>'); ?>
+                        <?= anchor('penjualan/insertToCart/' . $p['id'], '<div class="btn btn-sm btn-info">Tambah</div>'); ?>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
 
-    <a href="<?= base_url('penjualan/showKategori/') . $p['jenis'];; ?>" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true" style="margin: 25px 5px;">Kembali</a>
+    <a href="<?= base_url('penjualan/showKategori/') . $p['jenis'];; ?>" class="btn-circle btn-primary active text-decoration-none" role="button" data-bs-toggle="button" aria-pressed="true" style="margin: 25px 5px; width: 3rem; height: 3rem;">
+        <i class="fas fa-arrow-circle-left fa-2x"></i>
+    </a>
 </div>
 
 

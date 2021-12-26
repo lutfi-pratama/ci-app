@@ -9,7 +9,9 @@
         <?php endforeach; ?>
     </div>
 
-    <a href="<?= base_url('penjualan/'); ?>" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true" style="margin: 25px 5px;">Kembali</a>
+    <a href="<?= base_url('penjualan/'); ?>" class="btn-circle btn-primary active text-decoration-none" role="button" data-bs-toggle="button" aria-pressed="true" style="margin: 25px 5px; width: 3rem; height: 3rem;">
+        <i class="fas fa-arrow-circle-left fa-2x"></i>
+    </a>
 </div>
 
 
