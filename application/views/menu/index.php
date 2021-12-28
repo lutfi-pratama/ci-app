@@ -28,8 +28,8 @@
                             <th scope="row"><?= $i; ?></th>
                             <td><?= $m['menu']; ?></td>
                             <td>
-                                <a href="" class=" badge badge-success" data-toggle="modal" data-target="#updateMenuModal<?= $m['id']; ?> ">edit</a>
-                                <a href="<?= base_url('menu/delete/'); ?><?= $m['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
+                                <a href="" class=" badge badge-success" data-toggle="modal" data-target="#updateMenuModal<?= $m['id']; ?> ">Edit</a>
+                                <a href="<?= base_url('menu/delete/'); ?><?= $m['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">Delete</a>
                             </td>
                         </tr>
                         <?php $i++; ?>

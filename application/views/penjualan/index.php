@@ -6,7 +6,7 @@
     <div class="list-group" id="list-tab" role="tablist">
       <?php foreach ($jenis as $j) : ?>
         <a class="list-group-item list-group-item-action" href="<?= base_url('penjualan/showKategori/') . $j['jenis']; ?> " role="tab" aria-controls="{$j['jenis']}"><?= $j['jenis']?> </a>
-      <?php endforeach; ?>
+      <?php endforeach; ?> 
     </div>
 </div>
 

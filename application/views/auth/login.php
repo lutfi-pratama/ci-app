@@ -1,5 +1,5 @@
 <div class="container">
-
+<link rel="stylesheet" type="text/css" href="style.css">
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
@@ -12,7 +12,7 @@
                         <div class="col-lg">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Halo!</h1>
                                 </div>
 
                                 <?= $this->session->flashdata('message'); ?>

@@ -43,8 +43,8 @@
                             <td><?= $pd['produk']; ?></td>
                             <td><?= $pd['harga']; ?></td>
                             <td>
-                                <a href="<?= base_url('Produk/edit/'); ?><?= $pd['id']; ?>" class=" badge badge-success" data-toggle="modal" data-target="#updateProdukModal<?= $pd['id']; ?> ">edit</a>
-                                <a href="<?= base_url('Produk/delete/'); ?><?= $pd['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
+                                <a href="<?= base_url('Produk/edit/'); ?><?= $pd['id']; ?>" class=" badge badge-success" data-toggle="modal" data-target="#updateProdukModal<?= $pd['id']; ?> ">Edit</a>
+                                <a href="<?= base_url('Produk/delete/'); ?><?= $pd['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
