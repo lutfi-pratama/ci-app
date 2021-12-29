@@ -3,12 +3,18 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
 
-    <div class="list-group" id="list-tab" role="tablist">
+    
+    <div class="row g-10">
+    <table class="table-bordered">
+        <div class="col">
       <?php foreach ($jenis as $j) : ?>
-        <a class="list-group-item list-group-item-action" href="<?= base_url('penjualan/showKategori/') . $j['jenis']; ?> " role="tab" aria-controls="{$j['jenis']}"><?= $j['jenis']?> </a>
+        </div>
+        <a class="col" href="<?= base_url('penjualan/showKategori/') . $j['jenis']; ?> " role="tab" aria-controls="{$j['jenis']}"><?= $j['jenis']?> </a>
       <?php endforeach; ?>
     </div>
+    </table>
 </div>
+
 
 
 
