@@ -30,8 +30,8 @@
                             <td><?= $k['jenis']; ?></td>
                             <td><?= $k['kategori']; ?></td>
                             <td>
-                                <a href="" class=" badge badge-success" data-toggle="modal" data-target="#updateKategoriModal<?= $k['id']; ?> ">edit</a>
-                                <a href="<?= base_url('produk/deleteKategori/'); ?><?= $k['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
+                                <a href="" class=" badge badge-success" data-toggle="modal" data-target="#updateKategoriModal<?= $k['id']; ?> ">Edit</a>
+                                <a href="<?= base_url('produk/deleteKategori/'); ?><?= $k['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">Delete</a>
                             </td>
                         </tr>
                         <?php $i++; ?>

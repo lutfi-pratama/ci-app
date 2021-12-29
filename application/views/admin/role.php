@@ -28,11 +28,11 @@
                             <th scope="row"><?= $i; ?></th>
                             <td><?= $r['role']; ?></td>
                             <td>
-                                <a href="<?= base_url('admin/roleaccess/') . $r['id'];?>" class=" badge badge-warning">access</a>
+                                <a href="<?= base_url('admin/roleaccess/') . $r['id'];?>" class=" badge badge-warning">Access</a>
 
-                                <a href="" class="badge badge-success" data-toggle="modal" data-target="#updateRoleModal<?= $r['id'] ?>">edit</a>
+                                <a href="" class="badge badge-success" data-toggle="modal" data-target="#updateRoleModal<?= $r['id'] ?>">Edit</a>
 
-                                <a href="<?= base_url('admin/delete/'); ?><?= $r['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">delete</a>
+                                <a href="<?= base_url('admin/delete/'); ?><?= $r['id']; ?>" class=" badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?');">Delete</a>
                             </td>
                         </tr>
                         <?php $i++; ?>
