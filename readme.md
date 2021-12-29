@@ -2,9 +2,9 @@
 
 ### Disusun Oleh Kelompok 6 :
 1. Eka Rizqy Mar'atus Sholohah (19081010022)
-2. Alfine Damayanti (19081010039)
+2. Alfina Damayanti (19081010039)
 3. Muhammad Lutfi Pratama (19081010049)
-4. Fransiskuks Jonathan Tanudjaja (19081010062)
+4. Fransiskus Jonathan Tanudjaja (19081010062)
 5. Almira Aurora Prameswaty (19081010137)
 
 <br />
