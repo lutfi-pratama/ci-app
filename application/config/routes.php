@@ -53,3 +53,4 @@ $route['default_controller'] = 'Auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['produk/(:num)'] = 'produk';
+$route['admin/(:num)'] = 'admin';

@@ -3,10 +3,9 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-code"></i>
+        <div class="sidebar-brand-icon">
+            <img style="margin:10px 0px 0px 0px; height: 125px;; width:150px; object-fit: cover;" src="<?= base_url('logo.png'); ?>" alt="Logo">
         </div>
-        <div class="sidebar-brand-text mx-3">POS</div>
     </a>
 
     <!-- Divider -->

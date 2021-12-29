@@ -7,7 +7,7 @@
         <div style="width: 60%;" class="btn-group-toggle d-flex flex-column" name="metode" data-toggle="buttons">
           <label style="align-items: center; cursor: pointer;" class="btn btn-outline-info my-2 d-flex justify-content-between">
             <img class="my-1 img-thumbnail image__payment" src="<?php echo base_url('assets/img/icon/GoPay.png'); ?>" />
-            <input type="radio" value="Gopay" name="metode" id="gopay" autocomplete="off" checked> Gapay
+            <input type="radio" value="Gopay" name="metode" id="gopay" autocomplete="off" checked> Gopay
             <p class="m-0">Rp. <?= number_format($this->cart->total() + 2000, 0, ',', '.') ?></p>
           </label>
           <label style="align-items: center; cursor: pointer;" class="btn btn-outline-info my-2 d-flex justify-content-between">

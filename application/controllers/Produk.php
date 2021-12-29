@@ -72,7 +72,7 @@ class Produk extends CI_Controller
       $upload_image = $_FILES['image']['name'];
 
       if ($upload_image) {
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size']     = '5256';
         $config['upload_path'] = './assets/img/produk';
 

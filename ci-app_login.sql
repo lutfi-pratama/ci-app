@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2021 at 06:42 PM
+-- Generation Time: Dec 29, 2021 at 06:27 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -47,7 +47,10 @@ INSERT INTO `invoice` (`id`, `user`, `pembayaran`, `tgl_bayar`) VALUES
 (26, 'Manager', 'Gopay', '2021-12-27 00:06:20'),
 (27, 'Manager', 'Gopay', '2021-12-27 00:10:12'),
 (28, 'Budi dermawan', 'OVO', '2021-12-28 22:10:33'),
-(29, 'Budi dermawan', 'Gopay', '2021-12-28 22:11:31');
+(29, 'Budi dermawan', 'Gopay', '2021-12-28 22:11:31'),
+(30, 'Budi dermawan', 'Debit', '2021-12-29 10:52:10'),
+(31, 'Kasir Restoran Kola', 'OVO', '2021-12-29 11:09:53'),
+(32, 'Budi dermawan', 'Gopay', '2021-12-29 11:32:53');
 
 -- --------------------------------------------------------
 
@@ -85,7 +88,17 @@ INSERT INTO `pembelian` (`id`, `id_invoice`, `id_produk`, `nama`, `jumlah`, `har
 (52, 26, 15, 'Ikan Bakar', 1, 30000, ''),
 (53, 27, 18, 'Coca Cola', 1, 7000, ''),
 (54, 28, 1, 'Nasi udang', 1, 15000, ''),
-(55, 29, 18, 'Coca Cola', 1, 7000, '');
+(55, 29, 18, 'Coca Cola', 1, 7000, ''),
+(56, 30, 15, 'Ikan Bakar', 1, 30000, ''),
+(57, 31, 15, 'Ikan Bakar', 2, 30000, ''),
+(58, 31, 20, 'Kerang Hijau Saus Tiram', 1, 45000, ''),
+(59, 32, 15, 'Ikan Bakar', 1, 30000, ''),
+(60, 32, 20, 'Kerang Hijau Saus Tiram', 1, 45000, ''),
+(61, 32, 12, 'Fanta', 1, 7000, ''),
+(62, 32, 18, 'Coca Cola', 1, 7000, ''),
+(63, 32, 16, 'Ayam Goreng', 1, 11000, ''),
+(64, 32, 23, 'Bebek Goreng Sinjay', 1, 17000, ''),
+(65, 32, 22, 'Nasi Putih', 2, 5000, '');
 
 -- --------------------------------------------------------
 
@@ -148,7 +161,8 @@ INSERT INTO `produk_kategori` (`id`, `jenis`, `kategori`) VALUES
 (2, 'Makanan', 'Snack'),
 (3, 'Makanan', 'Nasi'),
 (6, 'Minuman', 'Softdrink'),
-(11, 'Makanan', 'Gorengan');
+(11, 'Makanan', 'Gorengan'),
+(12, 'Minuman', 'Sehat');
 
 -- --------------------------------------------------------
 
@@ -170,13 +184,18 @@ CREATE TABLE `produk_list` (
 --
 
 INSERT INTO `produk_list` (`id`, `image`, `jenis`, `kategori`, `produk`, `harga`) VALUES
-(1, 'default.jpg', 'Makanan', 'Seafood', 'Nasi udang', 15000),
-(12, 'img3401-1579713669.jpg', 'Minuman', 'Snack', 'Fanta', 2000),
-(14, 'chemsun_ceramic3.jpg', 'Minuman', 'Snack', 'Tahu Goreng', 7000),
-(15, '20f535c616bbe807a1166e5661b396fd.jpg', 'Makanan', 'Seafood', 'Ikan Bakar', 30000),
-(16, 'Elder_Cara__2_-removebg-preview.png', 'Makanan', 'Snack', 'Ayam Goreng', 5000),
-(17, 'Zecre.png', 'Makanan', 'Seafood', 'Susu', 6000),
-(18, 'Elder_Cara__3_-removebg-preview.png', 'Minuman', 'Softdrink', 'Coca Cola', 7000);
+(1, 'nasi_goreng.jpg', 'Makanan', 'Nasi', 'Nasi Goreng', 15000),
+(12, 'fanta.jpg', 'Minuman', 'Softdrink', 'Fanta', 7000),
+(14, 'tahu_goreng3.jpg', 'Makanan', 'Snack', 'Tahu Goreng', 1500),
+(15, 'ikan_bakar.jpg', 'Makanan', 'Seafood', 'Ikan Bakar', 30000),
+(16, 'ayam_goreng.jpg', 'Makanan', 'Gorengan', 'Ayam Goreng', 11000),
+(17, 'susu.jpg', 'Minuman', 'Sehat', 'Susu', 4000),
+(18, 'coca_cola.jpg', 'Minuman', 'Softdrink', 'Coca Cola', 7000),
+(19, 'air.jpg', 'Minuman', 'Sehat', 'Air Mineral', 4000),
+(20, 'kerang_hijau.jpg', 'Makanan', 'Seafood', 'Kerang Hijau Saus Tiram', 45000),
+(21, 'kentang_goreng.jpg', 'Makanan', 'Snack', 'Kentang Goreng', 10000),
+(22, 'nasi_putih.jpg', 'Makanan', 'Nasi', 'Nasi Putih', 5000),
+(23, 'bebek.jpg', 'Makanan', 'Gorengan', 'Bebek Goreng Sinjay', 17000);
 
 -- --------------------------------------------------------
 
@@ -222,7 +241,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(1, 'Kasir Restoran Dewata', 'fransiskus847@gmail.com', 'python3.gif', '$2y$10$AR7h0qOtqdG7KkXh8iuwd.BGMmnwW0VP1XDh8bsDbfclMR2DS/HxG', 2, 1, 1638793547),
+(1, 'Kasir Restoran Kola', 'fransiskus847@gmail.com', 'logo_pos.png', '$2y$10$Xtan5xhmbZNex/g2s.gWTutDaFzUwavycK9cqyRavQHGydBegywom', 2, 1, 1638793547),
 (2, 'Budi dermawan', 'fransjonathan676@gmail.com', 'H4800d3af50e44350827bc5c52cb399edc.jpg', '$2y$10$/MPSClYaW5ndaXaR9gNQ6eGMiuhVufOm8CyuR71FTUxNItZ2HRFh2', 1, 1, 1638793576),
 (3, 'qwer', 'pratamalutfi60@gmail.com', 'default.jpg', '$2y$10$4FFhgoL0h..BEgyr20HTT.cDzO/SVKwfh8DzuVlQb5vSmXTJUSNOy', 1, 1, 1638806583),
 (4, 'admin', 'pratamalutfi@gmail.com', 'default.jpg', 'admin123', 1, 1, 0),
@@ -254,8 +273,8 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (20, 1, 60),
 (24, 5, 3),
 (25, 5, 60),
-(26, 1, 61),
-(27, 2, 61);
+(27, 2, 61),
+(28, 1, 61);
 
 -- --------------------------------------------------------
 
@@ -342,13 +361,6 @@ CREATE TABLE `user_token` (
   `token` varchar(128) NOT NULL,
   `date_created` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user_token`
---
-
-INSERT INTO `user_token` (`id`, `email`, `token`, `date_created`) VALUES
-(1, 'fransiskus847@gmail.com', 'NtYa0zGa3NSwe9pJn3rMdf4enAdyna8D9c+FyIT9R5E=', 1640713298);
 
 --
 -- Indexes for dumped tables
@@ -440,13 +452,13 @@ ALTER TABLE `user_token`
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `pembelian`
 --
 ALTER TABLE `pembelian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `produk_access`
@@ -464,13 +476,13 @@ ALTER TABLE `produk_jenis`
 -- AUTO_INCREMENT for table `produk_kategori`
 --
 ALTER TABLE `produk_kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `produk_list`
 --
 ALTER TABLE `produk_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `produk_menu`
@@ -488,7 +500,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `user_menu`

@@ -7,16 +7,20 @@
 4. Fransiskuks Jonathan Tanudjaja (19081010062)
 5. Almira Aurora Prameswaty (19081010137)
 
+<br />
+
 # **Tampilan Aplikasi**
 ---
 - ## Logo Aplikasi
   ![Logo](logo_pos.png)
 
 - ## Halaman Utama - Admin
-<!-- Dashboard -->
+  ![Logo](halaman_utama.png) 
 
 - ## Halaman Utama - User (Kasir)
-<!-- Penjualan -->
+  ![Logo](halaman_kasir.png)
+
+<br />
 
 # **Deskripsi Aplikasi**
 ---
@@ -26,6 +30,8 @@
 
 - Aplikasi juga menyediakan manajemen user, jadi baik kasir ataupun admin dapat mengedit profilnya. Admin memiliki akses dalam manajemen fitur seperti, olah menu, submenu, akses user (role), oleh produk penjualan dan kategori, dan riwayat penjualan. 
    
+<br />
+
 # **Sitemap/Hierarki Aplikasi**
 ---
 ![Logo](SITEMAP.png)
@@ -61,7 +67,9 @@
 
   - ### Menu - Transaksi
     Saat pembeli melakukan transaksi, kasir akan mengirim data transaksi pembelian produk melalui menu ini. Submenu Penjualan akan menampilkan daftar produk yang siap jual berdasarkan jenis dan kategorinya. Terdapat opsi metode pembayaran yang tersedia. Jika transaksi sukses sistem akan memberikan notifikasi secara langsung.
-    
+
+<br />
+
 # **TEKNOLOGI YANG DIGUNAKAN DALAM PENGEMBANGAN APLIKASI**
 ---
 - ### Code Ignitor 3  
@@ -79,6 +87,8 @@
 - ### CSS  
   CSS adalah kepanjangaan dari Cascading Style Sheets yang berguna untuk menyederhanakan proses pembuatan website dengan mengatur elemen yang tertulis di bahasa markup. CSS dipakai untuk mendesain tampilan website (front end).
 
+<br />
+
 # **CARA PENGGUNAAN APLIKASI**
 ---
 - ## ADMIN
@@ -90,11 +100,12 @@
 
   Admin memiliki akses untuk mengontrol produk yang akan dijual. Jika restoran memiliki produk baru, admin dapat menambahkan dan menentukan harga produk tersebut pada submenu **Produk**. Jika masuk ke kategori makanan baru, admin juga dapat menambahkan kategori baru pada submenu **Kategori**. Data produk dan kategori yang telah disimpan masih dapat diubah oleh admin, misal update gambar makanan/minuman, nama produk, dsb. Admin dapat menghapus juga data produk dan kategori yang telah ada. Jika dirasa semua akses dan olah data telah selesai, admin dapat melakukan **Logout** untuk keluar dari aplikasi. 
   
-
 - ## KASIR
   Untuk menjalankan aplikasi Point of Sale sebagai kasir(user), pertama-tama pengguna harus mendaftarkan akun baru terlebih dahulu jika pengguna belum memiliki akun. Dengan memasukkan email, nama lengkap serta password, selanjutnya setelah itu pengguna akan diarahkan untuk login aplikasi disini pengguna dapat memasukkan email serta password yang sesuai dengan yang telah dimasukkan pada saat pembuatan akun. Setelah berhasil login, sebagai kasir pengguna akan diarahkan ke halaman default yaitu halaman **My Profile**, disini pengguna dapat melihat informasi mengenai dirinya seperti nama lengkap, gambar dan lainnya. Selanjutnya pengguna dapat melakukan perubahan pada profil pada halaman **Edit Profile** jika ingin merubah data diri pengguna.
   
   Setelah itu, sebagai kasir tersedia menu ***Transaksi*** yang didalamnya ada fitur **Penjualan** dimana disini sebagai kasir, pengguna dapat merekam penjualan barang yang dibeli oleh customer. Langkah-langkahnya adalah pertama kasir memilih jenis penjualan, entah itu makanan/minuman selanjutnya kasir dapat memilih kategori dari jenis barang tersebut dan kasir memasukkan jumlah produk yang sesuai dengan yang dibeli oleh customer ke dalam keranjang. Setelah semua barang masuk ke dalam keranjang maka kasir dapat melakukan checkout keranjang dan akan diarahkan ke halaman metode pembayaran, disini kasir memasukkan metode pembayaran sesuai dengan yang diinginkan customer dan pembayaran dilakukan dan berhasil. Kasir dapat melakukan **Logout** untuk keluar dari aplikasi POS, jika jam kerja telah selesai.
+
+<br />
 
 # **FITUR - FITUR YANG DITAWARKAN**
 ___  
@@ -102,52 +113,52 @@ ___
 ## FITUR LOGIN & REGISTRATION
   1. ### Fitur Registration 
       Halaman ini digunakan jika pengguna belum memiliki akun bertujuan untuk membuat user baru.
-      <!-- Tampilan Registrasi Page -->
+      ![Logo](registrasi.png)
     
   2. ### Fitur Login
       Halaman ini akan mengarahkan user ke halaman utama aplikasi sesuai dengan role user. Disini juga terdapat fitur lupa password. 
-      <!-- Tampilan Login Page -->
+      ![Logo](login.png)
 
 ## FITUR WEB AS CASHIER
 Fitur-fitur yang disediakan oleh aplikasi POS ini untuk role user / kasir, antara lain :
 
 1. ### Fitur Olah Profil  
    - Fitur ini akan menampilkan informasi pribadi mengenai user seperti nama, email dan lainnya.
-    <!-- Tampilan My Profile -->
+    ![Logo](halaman_kasir.png)
    - Fitur ini akan menampilkan halaman untuk memperbaharui informasi pribadi seperti nama dan gambar.
-    <!-- Tampilan Edit Profile -->  
+    ![Logo](edit_profile.png)  
 
 2. ### Fitur Penjualan
     Pada fitur ini akan ditampilkan jenis produk, kategori produk, produk, cart belanja, metode pembayaran serta halaman succes pembayaran.
      - Jenis produk seperti makanan dan minuman.
-        <!-- Jenis Produk -->
+       ![Logo](jenis_produk.png) 
      - Kategori produk seperti nasi, mie dan sebagainya.
-        <!-- Kategori produk    -->
+       ![Logo](kategori_produk.png) 
      - Produk seperti cocacola, nasi goreng dan lain-lain.   
-        <!-- Produk -->
+       ![Logo](produk_jual.png) 
      - Cart belanja akan berisikan produk-produk yang dipilih beserta harga setiap produk.   
-        <!-- Cart Belanja -->
+       ![Logo](cart_belanja.png) 
      - Metode pembayaran akan menampilkan pilihan metode pembayaran serta harga total.
-        <!-- Metode Pembayaran -->
+       ![Logo](metode_pembayaran.png) 
      - Halaman success pembayaran.
-        <!-- Halaman Success -->
+       ![Logo](succes.png) 
 
 ## FITUR WEB AS ADMIN
 Fitur-fitur yang disediakan oleh aplikasi POS ini untuk role admin, antara lain :
 
 1. ### Fitur Riwayat Penjualan (Invoice)
-   - Fitur ini akan menampilkan riwayat penjualan produk makanan / minuman dalam bentuk tabel. Terdapat 5 kolom  meliputi : ID invoice, Penanggungjawab, Metode Pembayaran, Tanggal Pembayaran serta aksi untuk menampilkan detail invoice.
-   <!-- Tampilan Riwayat Penjualan -->
+   - Fitur ini akan menampilkan riwayat penjualan produk makanan / minuman dalam bentuk tabel. Terdapat 5 kolom  meliputi : ID invoice, Penanggungjawab, Metode Pembayaran, Tanggal Pembayaran serta aksi untuk menampilkan detail invoice. Telah menerapkan pagination. 
+   ![Logo](halaman_utama.png) 
    - Menampilkan detail invoice yang berisikan informasi mengenai produk yang terjual serta harga jual produk.
-    <!-- Tampilan Detail Invoice -->  
+    ![Logo](detail_invoice.png)   
 
 2. ### Fitur Kelola Hak Akses
    - Fitur ini dapat mengatur hak akses setiap role terhadap menu yang tersedia. Menerapkan CRUD Role. 
-    <!-- List role -->
-    <!-- Tampilan Create Role -->
-    <!-- Tampilan Edit Role -->
+    ![Logo](view_role.png)
+    ![Logo](createrole.png)
+    ![Logo](updaterole.png) 
    - Menampilkan halaman untuk mengedit hak access pada role yang dipilih.
-    <!-- Tampilan Access Role -->  
+    ![Logo](roleaccess.png)  
     
 3. ### Fitur Olah Profil
    - Fitur ini akan menampilkan informasi pribadi mengenai admin seperti nama, email dan lainnya.  
@@ -157,28 +168,30 @@ Fitur-fitur yang disediakan oleh aplikasi POS ini untuk role admin, antara lain 
 
 4. ### Fitur Management Menu 
    - Fitur ini dapat mengelola setiap menu pada aplikasi. Menerapkan CRUD Menu.
-    <!-- List Menu -->
-    <!-- Tampilan Create Menu -->
-    <!-- Tampilan Edit Menu -->
+    ![Logo](menu-manajemen.png) 
+    ![Logo](addmenu.png) 
+    ![Logo](editmenu.png) 
 
 5. ### Fitur Management SubMenu 
    - Fitur ini dapat mengelola setiap submenu berdasarkan menu yang tersedia pada aplikasi. Menerapkan CRUD Submenu.
-    <!-- List SubMenu -->
-    <!-- Tampilan Create SubMenu -->
-    <!-- Tampilan Edit SubMenu -->
+    ![Logo](submenu-manajemen.png) 
+    ![Logo](addsubmenu.png) 
+    ![Logo](editsubmenu.png) 
 
 6. ### Fitur Manajemen Produk
    - #### Produk
       Fitur ini dapat mengelola produk penjualan berdasarkan kategori. Menerapkan CRUD Produk dan Pagination.
-    <!-- List Produk + Pagination -->
-    <!-- Tampilan Create Produk -->
-    <!-- Tampilan Edit Produk -->
+    ![Logo](produk-manajemen.png) 
+    ![Logo](addproduk.png)
+    ![Logo](editproduk.png)
   
     - #### Kategori
       Fitur ini dapat mengelola setiap kategori produk yang tersedia pada aplikasi. Menerapkan CRUD Kategori.
-      <!-- List Kategori -->
-      <!-- Tampilan Create Kategori -->
-      <!-- Tampilan Edit Kategori -->
+    ![Logo](kategori-manajemen.png) 
+    ![Logo](addkategori.png)
+    ![Logo](editkategori.png)
+
+<br />
 
 # **KODE - KODE INTI**
 _____
@@ -234,6 +247,8 @@ _____
     ``` 
     Konfigurasi default route 'Auth' dan konfigurasi pagination pada produk.
 
+<br />
+
 ## **Global**
   ```php
   $this->load->library('form_validation'); 
@@ -247,6 +262,8 @@ _____
   is_logged_in();
   ``` 
   Inisialisasi library, helper dan model yang digunakan kontroler.
+
+<br />
 
 ## **Controller**
   - ### Auth
@@ -387,34 +404,447 @@ _____
     Destroy session untuk data user.
     
   - ### Admin
-   ```php 
-  $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-  $data['role'] = $this->db->get('user_role')->result_array();
-  ```
-  Ambil data untuk validasi berdasarkan user rolenya
+    ```php 
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['role'] = $this->db->get('user_role')->result_array();
+    ```
+    Ambil data untuk validasi berdasarkan user rolenya
 
-  ```php 
-  $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-  $data['role'] = $this->db->get('user_role')->result_array();
-  ```
+    ```php 
+    $this->menu_model->deleteRole($id);
+    ```
+    Memanggil method delete untuk menghapus Role.
 
-  
+    ```php 
+    $data = [
+      'role_id' => $role_id,
+      'menu_id' => $menu_id
+    ];
+
+    $result = $this->db->get_where('user_access_menu', $data);
+
+    if($result->num_rows() < 1) {
+      $this->db->insert('user_access_menu', $data);
+    } else {
+      $this->db->delete('user_access_menu', $data);
+    }
+    ```
+    Konfigurasi akses user pada database
+
+    ```php 
+    $this->menu_model->updateRole($id);
+    ```
+    Memanggil method mengedit role
+
+    ```php 
+    $this->menu_model->addRole();
+    ```
+    Memanggil method untuk menambah role baru
+
+    ```php
+    $this->load->library('pagination');
+    $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+    $total_record = $this->menu_model->get_total();
+    $limit_per_page = 7;
+    ```
+    ```php  
+    $this->pagination->initialize($config);
+    $data["links"] = $this->pagination->create_links();
+    ```
+    ```php
+    $data['start'] = $this->uri->segment(2);
+    ```
+    Konfigurasi pagination pada halaman Dashboard
+
   - ### User 
+    ```php 
+    $data['title'] = 'My Profile';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    ```
+    Mendapatkan data user berdasarkan emailnya dan memastikan title sesuai dengan pengkondisian pada view agar styling menu bersifat focus. 
 
+    ```php 
+    if($upload_image) {
+      $config['allowed_types'] = 'gif|jpg|png';
+      $config['max_size']     = '5256';
+      $config['upload_path'] = './assets/img/profile';
+
+      $this->load->library('upload', $config);
+
+      if($this->upload->do_upload('image')) {
+          $new_image = $this->upload->data('file_name');
+          $this->db->set('image', $new_image);
+      } else {
+          echo $this->upload->display_errors();
+      }
+    }
+    ```
+    ```php
+    $this->db->set('name', $name);
+    $this->db->where('email', $email);
+    $this->db->update('user');
+    ```
+    Terdapat pengkondisian terhadap gambar yang telah diimport user, jika gambar berhasil diimport akan disimpan ke database, setelah itu perubahan data-data yang lain.
+
+    ```php
+    $current_password = $this->input->post('current_password');
+    $new_password = $this->input->post('new_password1');
+    ```
+    ```php
+    $password_hash = password_hash($new_password, PASSWORD_DEFAULT);
+    $this->db->set('password', $password_hash);
+    $this->db->where('email', $this->session->userdata('email'));
+    $this->db->update('user');
+    ```
+    Menyimpan password baru ke database, password yang disimpan telah diconvert menggunakan fungsi password_hash 
+ 
   - ### Menu
+    ```php
+    $data['title'] = 'Menu Management';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    ```
+    Mendapatkan data user berdasarkan emailnya dan memastikan title sesuai dengan pengkondisian pada view agar styling menu bersifat focus. 
+
+    ```php
+    $this->menu_model->deleteMenu($id);
+    ```
+    Memanggil method deleteMenu pada model untuk menghapus Menu yang telah ada pada aplikasi.
+
+    ```php
+    $this->menu_model->UpdateMenu($id);
+    ```
+    Memanggil method UpdateMenu pada model untuk mengubah format Menu yang telah ada pada aplikasi.
+
+    ```php
+    $data = [
+      'title' => $this->input->post('title'),
+      'menu_id' => $this->input->post('menu_id'),
+      'url' => $this->input->post('url'),
+      'icon' => $this->input->post('icon'),
+      'is_active' => $this->input->post('is_active')
+    ];
+    $this->db->insert('user_sub_menu', $data);
+    ```
+    Menyimpan data submenu baru pada ke database. 
+
+    ```php
+    $this->menu_model->deleteSubMenu($id);
+    ```
+    Memanggil method untuk menghapus Submenu pada database.
+
+    ```php
+    $this->menu_model->updateSubMenu($id);
+    ```
+    Memanggil method untuk mengedit Submenu pada database.
+
   - ### Produk
+    ```php
+    $this->load->library('pagination');
+    $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+    $total_record = $this->menu_model->get_total();
+    $limit_per_page = 3;
+    ```
+    Memanggil library untuk fungsi pagination dan konfigurasi awal
+
+    ```php  
+    $this->pagination->initialize($config);
+    $data["links"] = $this->pagination->create_links();
+    ```
+    Inisialisasi data link yang akan ditampilkan pada view berdasarkan inisialisasi config pada full code. 
+
+    ```php
+    $data['start'] = $this->uri->segment(2);
+    ```
+    Konfigurasi routing untuk pagination.
+
+    ```php
+    if ($this->upload->do_upload('image')) {
+      $data = [
+        'image' => $this->upload->data('file_name'),
+        'jenis' => $this->input->post('jenis'),
+        'kategori' => $this->input->post('kategori'),
+        'produk' => $this->input->post('produk'),
+        'harga' => $this->input->post('harga')
+      ];
+      $this->db->insert('produk_list', $data);
+    } else {
+      echo $this->upload->display_errors();
+    }
+    ```
+    Terdapat kode untuk upload image ke database seperti yang dilakukan pada edit profil.  
+
+    ```php
+    $this->menu_model->updateProduk($id);
+    ```
+    Memanggil method pada model Menu untuk mengupdate produk yang telah ada pada database.  
+
+    ```php
+    $this->menu_model->deleteProduk($id);
+    ```
+    Memanggil method pada model Menu untuk menghapus produk yang telah ada pada database.  
+
+    ```php
+    $this->menu_model->addKategori();
+    ```
+    Memanggil method pada model untuk menambahkan kategori baru pada database.
+
+    ```php
+    $this->menu_model->deleteKategori($id);
+    ```
+    Memanggil method pada model untuk menghapus kategori yang telah ada pada database.
+
+    ```php
+    $this->menu_model->UpdateKategori($id);
+    ```
+    Memanggil method pada model untuk mengedit kategori yang telah ada pada database.
+
   - ### Penjualan
+    ```php
+    $data['title'] = "Penjualan";
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['jenis'] = $this->db->get('produk_jenis')->result_array();
+    ```
+    Mendapatkan data user berdasarkan emailnya dan memastikan title sesuai dengan pengkondisian pada view agar styling submenu bersifat focus.
+
+    ```php
+    $dataKategori = $this->menu_model->getKategori($jenis);
+    ``` 
+    Mendapatkan data kategori berdasarkan parameter jenis produk yang dipilih.
+
+    ```php
+    $dataProduk = $this->menu_model->getProduk($kategori);
+    ``` 
+    Mendapatkan data kategori berdasarkan parameter kategori produk yang dipilih.
+
+    ```php
+    $data = [
+      'id' => $item[0]['id'],
+      'qty' => 1,
+      'price' => $item[0]['harga'],
+      'name' => $item[0]['produk']
+    ];
+
+    $this->cart->insert($data);
+    ``` 
+    Menyimpan data penjualan tiap produk pada cart dengan bantuan library cart.
+
+    ```php
+    $data['title'] = "Detail Penjualan";
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    ``` 
+    Inisialisasi data untuk memanggil view detail Cart atau halaman detail produk hasil penjualan pada cart.
+
+    ```php
+    $this->cart->destroy();
+    ```  
+    Menghapus seluruh data yang tersimpan pada cart. 
+
+    ```php
+    $data['title'] = "Pembayaran";
+    ```  
+    Pada full code akan memanggil view Pembayaran dengan title yang tertera.
+
   - ### Invoice
+    ```php
+    $this->invoice_model->insertData()
+    ``` 
+    Memanggil method pada model invoice untuk menyimpan data hasil pembelian yang tersimpan pada cart. 
+
+    ```php
+    $data['invoice'] = $this->invoice_model->getIdInvoice($id);
+    $data['source'] = $this->invoice_model->getIdPembelian($id);
+    ``` 
+    Mendapatkan data dari database berdasarkan id invoice dan pembelian untuk tampilan view detail detail_invoice.
+
+<br />
 
 ## **Models** 
   - ### Menu Model
+    Karena method medel yang dipanggil ada banyak, kami hanya melampirkan potongan kode yang mewakili fungsi CRUD ke database saja. 
+    ```php
+    $query = "SELECT `user_sub_menu`.*, `user_menu`.`menu` FROM `user_sub_menu` JOIN `user_menu` ON `user_sub_menu`.`menu_id` = `user_menu`.`id`";
+    return $this->db->query($query)->result_array();
+    ``` 
+    Mengambil data submenu dari database menggunakan join pada table lain. 
+
+    ```php
+    return $this->db->get_where('user_menu', ['id' => $id])->row_array();
+    ``` 
+    Cari berdasarkan id pada database.
+
+    ```php
+    $this->db->where('id', $id);
+    $this->db->delete('user_menu'); 
+    ``` 
+    Hapus data pada database.
+
+    ```php
+    $data = [
+      'title' => $this->input->post('title'),
+      'menu_id' => $this->input->post('menu_id'),
+      'url' => $this->input->post('url'),
+      'icon' => $this->input->post('icon'),
+      'is_active' => $this->input->post('is_active')
+    ];
+
+    $this->db->where('id', $id);
+    $this->db->update('user_sub_menu', $data);
+    ``` 
+    Update data pada database
+
+    ```php
+    return $this->db->count_all('invoice');
+    ``` 
+    Mendapatkan jumlah data untuk pagination
+
   - ### Invoice Model
+    Tidak semua kode kami lampirkan pada model ini, 
+
+    ```php
+    date_default_timezone_set('Asia/Jakarta');
+    ``` 
+    Get data current time.
+    ```php
+    foreach ($this->cart->contents() as $item){
+      $data = [
+        'id_invoice' => $id_invoice,
+        'id_produk' => $item['id'],
+        'nama' => $item['name'],
+        'jumlah' => $item['qty'],
+        'harga' => $item['price'], 
+      ];
+
+      $this->db->insert('pembelian', $data);
+    }
+    ``` 
+    Menambahkan setiap data produk dari cart ke database.
+
+    ```php
+    $result = $this->db->where('id_invoice', $id)->get('pembelian');
+    ``` 
+    Mendapatkan data berdasarkan id.
+
+<br />
 
 ## **View**
   - ### Auth
+    ```php
+    <?= $this->session->flashdata('message'); ?>
+    <?php unset($_SESSION['message']); ?>
+    ``` 
+    Menonaktifkan session flashdata yang dipanggil dari kontroler. Ini juga ada pada beberapa view lain pada halaman fitur-fitur aplikasi.
+    
+    Folder view ini berisi tampilan halaman : **Login, Registrasi, Change Password, Forget Password dan Blocked**
+
+    *Halaman Blocked akan tampil apabila route yang dipanggil tidak sesuai atau tidak memiliki fungsi*
+
   - ### Templates
+    File-file didalam folder Templates merupakan tampilan yang akan selalu dipanggil saat pembuatan menu atau fitur baru. Tampilan pada template meliputi : 
+    **Header & Footer Auth, Footer, Header, Sidebar dan Topbar**.
+    ```php
+    $role_id = $this->session->userdata('role_id');
+    $queryMenu = "SELECT `user_menu`.`id`, `menu`
+                    FROM `user_menu` JOIN `user_access_menu` 
+                    ON `user_menu`.`id` = `user_access_menu`.`menu_id`
+                    WHERE `user_access_menu`.`role_id` = $role_id
+                    ORDER BY `user_access_menu`.`menu_id` ASC
+                ";
+    ``` 
+    Kode pada view untuk mendapatkan list menu berdasarkan dari user role dan hak aksesnya. List menu akan ditampilkan pada view melalui menggunakan foreach, 
+    ```php
+    <?php foreach ($menu as $m) : ?>
+    ``` 
+    Looping Menu.
+    
+    ```php
+    $menuId = $m['id'];
+    $querySubMenu = "SELECT *
+                        FROM `user_sub_menu` 
+                        WHERE `menu_id` = $menuId
+                        AND `is_active` = 1
+                    ";
+    ``` 
+    Mendapatkan data list Submenu.
+
+    ```php
+    <?php foreach ($subMenu as $sm) : ?>
+    ``` 
+    Looping Submenu.
+    
   - ### Admin
+    View admin meliputi tampilan halaman, **Dashboard, Detail Invoice, Role Access, Role**
+    ```php
+    <?php foreach ($invoice as $inv) : ?>
+    ```
+    Get data invoice untuk ditampilkan.
+
+    ```php
+    <?php foreach ($menu as $m) : ?>
+    ```     
+    Menampilkan list menu
+
+    ```php
+    <?php foreach ($role as $r) : ?>
+    ``` 
+    Get data role untuk ditampilkan
+
   - ### User 
+    View user meliputi tampilan halaman, **Ganti Password, Edit Profil dan Detail Profil**.
+
+    ```php
+    <?= form_open_multipart('user/edit'); ?>
+    ``` 
+    Post data yang telah diupdate di komponen input.
+
   - ### Menu
+    View menu meliputi tampilan halaman, **List Menu dan List Submenu**.
+
+    ```php
+    <?php foreach ($menu as $m) : ?>
+    ``` 
+    Get data list menu. 
+
+    ```php
+    <?php foreach ($subMenu as $sm) : ?>
+    ``` 
+    Get data Submenu. 
+
   - ### Produk
+    View menu Produk meliputi tampilan halaman, **List Produk dan List Kategori Produk**.
+
+    ```php
+    <?php foreach ($produk as $pd) : ?>
+    ``` 
+    Get data list produk.
+
+    ```php
+    <?php foreach ($kategori as $k) : ?>
+    ``` 
+    Get data list kategori produk.
+
   - ### Penjualan
+    View menu Penjualan meliputi tampilan halaman, **List Jenis, List Kategori, List Produk, Keranjang, Pembayaran dan Penjualan Berhasil**.
+
+    ```php
+    <?php foreach ($jenis as $j) : ?>
+    ``` 
+    Get data jenis produk.
+    
+    ```php
+    <?php foreach ($kategori as $k) : ?>
+    ```
+    Get data kategori produk.
+
+    ```php
+    <?php foreach ($produk as $p) : ?>
+    ```
+    Get data produk.
+    
+    ```php
+    foreach ($this->cart->contents() as $item) :?>
+    ```
+    Get data dari Cart lalu dilakukan looping tiap datanya.
+    ```php
+    <?= number_format($this->cart->total(), 0, ',', '.')
+    ```
+    Untuk merubah format ke nominal uang. Digunakan juga pada halaman view lain. 

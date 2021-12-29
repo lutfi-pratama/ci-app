@@ -201,5 +201,13 @@ class menu_model extends CI_Model
     {
         return $this->db->get_where('produk_list', ['id' => $id])->result_array();
     }
+
+    function get_total_invoice()
+    {
+        //select * from mahasiswa -> dihitung CI jumlah rows
+        // return $this->db->get('mahasiswa')->num_rows();
+
+        return $this->db->count_all('invoice');
+    }
 }
 ?>

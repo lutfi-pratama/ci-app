@@ -35,12 +35,17 @@ class invoice_model extends CI_Model
       return true;
     }
 
-    public function showData()
+    public function showData($limit, $start)
     {
-      $result = $this->db->get('invoice');
+        $result = $this->db->query('set @row_number = '.$start+1);
+        $this->db->limit($limit, $start);
+        $result = $this->db->get('invoice');
 
       if($result->num_rows() > 0){
-        return $result->result_array();
+        foreach ($result->result_array() as $row) {
+          $data[] = $row;
+        }
+        return $data;
       }else {
         return false;
       }
